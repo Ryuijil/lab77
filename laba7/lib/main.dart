@@ -1,7 +1,8 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
-
+// import 'dart:ui';
+// import 'dart:html';
 
 
 import 'package:flutter/foundation.dart';
@@ -78,9 +79,9 @@ class NewsList extends StatelessWidget{
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
-              Image.network(newsL[index].previewP),
-              Container(child: Text(newsL[index].activeF, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w400, fontStyle: FontStyle.italic), textAlign: TextAlign.left,),
-                  margin: const EdgeInsets.fromLTRB(10, 10, 0, 0)),
+            Image.network(newsL[index].previewP),
+            Container(child: Text(newsL[index].activeF, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w400, fontStyle: FontStyle.italic), textAlign: TextAlign.left,),
+              margin: const EdgeInsets.fromLTRB(10, 10, 0, 0)),
               Container(child: Text(newsL[index].title, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, fontStyle: FontStyle.normal), textAlign: TextAlign.left,),
                   margin: const EdgeInsets.fromLTRB(10, 10, 0, 0)),
               const Divider(
@@ -108,10 +109,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const appTitle = 'новости КубГАУ';
+    const appTitle = 'Лента новостей КубГАУ';
 
     return MaterialApp(
-      title: 'lab77',
+      title: 'Лабораторная работа №7',
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
